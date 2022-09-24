@@ -1,0 +1,68 @@
+\documentclass[12]{article}%12pt即为*四号字
+\usepackage{ctex}%引入中文包
+\usepackage{graphicx}%插入图片的包
+\usepackage{geometry}%设置A4纸页边距的包
+\usepackage{url}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}%设置页边距
+\linespread{1}%设置行间距
+
+
+
+\begin{document}
+\begin{center}
+    \LARGE\songti\textbf{Chapter 1 homework} \\%标题
+    \large\kaishu\textbf{褚朱钇恒\qquad 3200104144}%一般是我的姓名
+\end{center}
+    \section{Theoretical questions}
+        \subsection{I}
+            The width of the interval at the nth step is $2^{-n+1}$, the max possible distance between r and midpoint is $1$.
+        \subsection{II}
+            At the nth step, the width of interval is $\frac{b_0-a_0}{2^n}$, the max absolute error is $\frac{b_0-a_0}{2^{n+1}}$, so the max relative error is $\frac{\frac{b_0-a_0}{2^{n+1}}}{a_0}$
+
+            As the relative error is no greater than $\epsilon$, so $\frac{\frac{b_0-a_0}{2^{n+1}}}{a_0} \le \epsilon$.
+
+            Then we have $log_2(b_0-a_0)-n-1-log(a_0)\le log(\epsilon)$.
+
+            So if $n \ge \frac{log(b_0-a_0)-log(\epsilon)-log(a_0)}{log(2)}-1$, the relative error is no greater than $\epsilon$.
+
+        \subsection{III}
+            $p^{'}(x)=12x^2-4x$
+            
+            The result is in the following table.
+            \begin{table}[htbp]
+                \centering
+                \small
+                \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                \textbf{$n$} & \textbf{$x_n$} & \textbf{$p(x_n)$} & \textbf{$p'(x_n)$} & \textbf{$x_n-\frac{p(x_n)}{p'(x_n)}$} \\ \hline
+                \textbf{0}   & -1.0000      & -3.0000           & 16.0000            & -0.8125                               \\ \hline
+                \textbf{1}   & -0.8125      & -0.4658           & 11.1719            & -0.7708                               \\ \hline
+                \textbf{2}   & -0.7708      & -0.0201           & 10.2129            & -0.7688                               \\ \hline
+                \textbf{3}   & -0.7688      & -3.9801           & 10.1686            & -0.7688                               \\ \hline
+                \textbf{4}   & -0.7688      &                   &                    &                                       \\ \hline
+                \end{tabular}
+            \end{table}
+        \subsection{IV}
+            Assume $\alpha$ is the true root, then from Taylor's expansion we have
+            $$
+f(x_n)=f(\alpha)+f^{'}(\xi)(x_n-\alpha)=f^{'}(\xi)(x_n-\alpha),\xi\in [\alpha,x_n]
+            $$
+
+            And combine with $x_{n+1}=x_n-\frac{f(x_n)}{f^{'}(x_0)}$, there is 
+
+            $$
+x_{n+1}=x_n-\frac{f^{'}(\xi)(x_n-\alpha)}{f^{'}(x_0)}
+            $$
+
+            Subtract $\alpha$ on both side, we get
+            $$
+            |x_{n+1}-\alpha|=|x_n-\alpha-\frac{f^{'}(\xi)(x_n-\alpha)}{f^{'}(x_0)}|
+            $$
+
+            This is equivalent to $e_{n+1}=|1-\frac{f^{'}(\xi)}{f^{'}(x_0)}|e_n$
+
+            Then we have $C=|1-\frac{f^{'}(\xi)}{f^{'}(x_0)}|$ and $s=1$ meet the question's requirement.
+
+        \subsection{V}
+            
+\end{document}
