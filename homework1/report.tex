@@ -66,5 +66,23 @@ x_{n+1}=x_n-\frac{f^{'}(\xi)(x_n-\alpha)}{f^{'}(x_0)}
             then we have $C=|1-\frac{f^{'}(\alpha)}{f^{'}(x_0)}|$ and $s=1$ meet the question's requirement.
 
         \subsection{V}
-            
+            Because $0 \le tan^{-1}(x) \le x(x>0)$, so $0\le x_{n+1}=tan^{-1}(x_n)\le x_n(x_n>0)$.
+
+            So if $x_0 \ge 0$, the interval is converge.
+
+            If $x_0 <0 $, then $\{-x_n\}$is converge, so $\{x_n\}$ is converge too.
+
+        \subsection{VI}
+            Let $f(x)=\frac{1}{x+p}$, then $x_0=1,x_1=f(x_0),x_2=f(x_1)\dots$
+
+            As $p>1$, then $f(x)$ is a continuous contraction on $[0,1]$, and it has a fixed point $\alpha = \frac{\sqrt[2]{p^2+4}-p}{2}$.
+
+            $\lambda = \max |f^{'}(x)=-\frac{1}{(x+p)^2}|<1$, from \textbf{Theorem 1.38}, we know $|x_n-\alpha|\le\frac{\lambda^n}{1-\lambda}|x_1-x_0|$.
+
+            So $x=\alpha=\frac{\sqrt[2]{p^2+4}-p}{2}$
+
+        \subsection{VII}
+            If we need absolute error no larger than $\delta$, then we have $\frac{b_0-a_0}{2^{n+1}}\le \delta$, which means $n \ge \frac{log(b_0-a_0)-logn}{log2} -1$.
+
+            As the true root might be $0$, the relative error isn't an appropriate measure.
 \end{document}
