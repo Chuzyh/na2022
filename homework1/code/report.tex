@@ -1,0 +1,54 @@
+\documentclass[12]{article}%12pt即为*四号字
+\usepackage{ctex}%引入中文包
+\usepackage{graphicx}%插入图片的包
+\usepackage{geometry}%设置A4纸页边距的包
+\usepackage{url}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}%设置页边距
+\linespread{1}%设置行间距
+
+
+
+\begin{document}
+\begin{center}
+    \LARGE\songti\textbf{Chapter 1 Programming Assignments} \\%标题
+    \large\kaishu\textbf{褚朱钇恒\qquad 3200104144}%一般是我的姓名
+\end{center}
+    \section{Programming Assignments}
+        \subsection{A}
+            The abstract base class and three method is in EquationSolver.h.
+        
+        \subsection{B}
+            \subsubsection{$x^{-1}-\tan(x)=0$}
+                $root=0.860333589\ f(root)=0.000000000$
+            \subsubsection{$\frac{1}{x}-2^x=0$}
+                $root=0.641185745\ f(root)=0.000000000$
+            \subsubsection{$2^{-x}+e^x+2cos(x)-6=0$}
+                $root=1.829383602\ f(root)=0.000000000$
+            \subsubsection{$\frac{x^3+4x^2+3x+5}{2x^3-9x^2+18x-2}=0$}
+                $root=0.117876567\ f(root)=6092072270288133.000000000$
+                
+                This root is wrong, because bisection method found the root of the denominator.
+        
+        \subsection{C}
+            $x-tan(x)=0$
+
+            $root_1=4.493409458 \ f(root_1)=-0.000000000$
+
+            $root_2=7.725251837 \ f(root_2)=0.000000000$
+        \subsection{D}
+            \subsubsection{$sin(\frac{x}{2}-1=0$}
+                $root=3.141592628\ f(root)=0.000000000$
+            \subsubsection{$\frac{1}{x}-2^x=0$}
+                $root=1.306326940\ f(root)=0.000000000$
+            \subsubsection{$2^{-x}+e^x+2cos(x)-6=0$}
+                $root=-0.188685403\ f(root)=6092072270288133.000000000$
+        \subsection{E}
+            Three methods' got the same result $0.166166035$. 
+        \subsection{F}
+            \subsubsection{a}
+                 $\alpha=32.972174822^\circ$
+            \subsubsection{b}
+                 $\alpha=33.168903820^\circ$
+            \subsubsection{c}
+                The program got $\alpha=528.5^\circ$, because the original equation has infinite solutions in the real number field.
+\end{document}

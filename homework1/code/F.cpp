@@ -35,21 +35,21 @@ public:
         return A*(-sx*sx+cx*cx)+B*sx*cx*2+C*sx-E*cx; 
     }
 } f;
-void task1()
+void solver1()
 {
     F f(89,49,55,11.5);
     NewtonSolver solver(33.0/180*pi,eps,f,64);
     double ans=solver.solve();
     printf("ans=%.9lf\n",ans/pi*180);
 }
-void task2()
+void solver2()
 {
     F f(89,49,30,11.5);
     NewtonSolver solver(33.0/180*pi,eps,f,64);
     double ans=solver.solve();
     printf("ans=%.9lf\n",ans/pi*180);
 }
-void task3()
+void solver3()
 {
     F f(89,49,55,11.5);
     SecandSolver solver(0,pi*3,eps,eps,f,64);
@@ -58,8 +58,8 @@ void task3()
 }
 int main()
 {
-    task1();
-    task2();
-    task3();
+    solver1();
+    solver2();
+    solver3();
     return 0;
 }
