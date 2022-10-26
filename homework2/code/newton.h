@@ -2,7 +2,6 @@
 #define _NEWTON_H_
 #include<bits/stdc++.h>
 using namespace std;
-
 class Newton_Interpolation
 {
 private:
@@ -35,7 +34,7 @@ public:
             }
         intered=n-1;
     }
-    double estimate(double X)
+    double operator()(double X)
     {
         if(intered<n-1)interpolate();
         double re=0,tmp=1;
