@@ -5,7 +5,7 @@ using namespace std;
 Newton_Interpolation f;
 int main()
 {
-    freopen("B.out","w",stdout);
+    freopen("./data/B.out","w",stdout);
     for(int n=2;n<=8;n+=2)
     {
         vector<double> X,Y;
