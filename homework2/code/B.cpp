@@ -1,6 +1,6 @@
 
 #include<bits/stdc++.h>
-#include "newton.h"
+#include "NewtonInterpolation.h"
 using namespace std;
 Newton_Interpolation f;
 int main()
