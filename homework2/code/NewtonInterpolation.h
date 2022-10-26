@@ -9,6 +9,15 @@ private:
     vector<double> x;
     vector<vector<double> > f;
     int n,intered;
+    void interpolate()
+    {
+        for(int i=intered+1;i<n;i++)
+            for(int j=1;j<=i;j++)
+            {
+                f[i].push_back((f[i][j-1]-f[i-1][j-1])/(x[i]-x[i-j]));
+            }
+        intered=n-1;
+    }
 public:
     
     void init(const vector<double> &X,const vector<double> &Y)
@@ -62,15 +71,7 @@ public:
                 else f[i][j]=((f[i][j-1]-f[i-1][j-1])/(x[i]-x[i-j]));
             }
     }
-    void interpolate()
-    {
-        for(int i=intered+1;i<n;i++)
-            for(int j=1;j<=i;j++)
-            {
-                f[i].push_back((f[i][j-1]-f[i-1][j-1])/(x[i]-x[i-j]));
-            }
-        intered=n-1;
-    }
+    
     double operator()(double X)
     {
         if(intered<n-1)interpolate();

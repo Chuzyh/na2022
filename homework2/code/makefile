@@ -10,3 +10,7 @@ test: make ./data/E.in
 	./D
 	./E
 	python fig.py
+	xelatex report.tex
+
+clean:
+	

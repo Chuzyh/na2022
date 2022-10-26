@@ -25,20 +25,20 @@ plt.legend(l)
 plt.savefig('./pic/C.eps')
 
 t=pd.read_csv("./data/D_dis.out",header=None)
-x=np.arange(0,12.01,0.01)
+x=np.arange(0,13.01,0.01)
 plt.figure()
 for i in range(0,1):
-    yi=t.iloc[i,0:1201]
+    yi=t.iloc[i,0:1301]
     plt.plot(x,yi)
 l=["distance"]
 plt.legend(l)
 plt.savefig('./pic/D_dis.eps')
 
 t=pd.read_csv("./data/D_speed.out",header=None)
-x=np.arange(0,12.01,0.01)
+x=np.arange(0,13.01,0.01)
 plt.figure()
 for i in range(0,1):
-    yi=t.iloc[i,0:1201]
+    yi=t.iloc[i,0:1301]
     plt.plot(x,yi)
 l=["speed"]
 plt.legend(l)
