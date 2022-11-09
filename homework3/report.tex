@@ -117,4 +117,21 @@
 
         综上，原等式成立。
             
+
+        \subsection{VII}
+            由B样条的微分性质，$\frac{d}{dx}B_i^n(x)=\frac{nB^{n-1}_i(x)}{t_{i+n-1}-t_{i-1}}-\frac{nB^{n-1}_{i+1}(x)}{t_{i+n}-t_{i}}$
+
+            那么有$\int_{t_{i-1}}^{t_{i+n}}\frac{B^n_i(x)}{t_{i+n}-t_{i-1}}dx-\int_{t_{i}}^{t_{i+n+1}}\frac{B^n_{i+1}(x)}{t_{i+n+1}-t_{i}}dx=$
+
+            $\int_{t_{i-1}}^{t_{i+n+1}}[\frac{B^n_i(x)}{t_{i+n}-t_{i-1}}-\frac{B^n_{i+1}(x)}{t_{i+n+1}-t_{i}}]dx=$
+            
+            $\frac{1}{n}B^{n+1}_i(x)|_{t_{i-1}}^{t_{i+n+1}}=0$ 
+            
+            故$\int_{t_{i-1}}^{t_{i+n}}\frac{B^n_i(x)}{t_{i+n}-t_{i-1}}dx=\int_{t_{i}}^{t_{i+n+1}}\frac{B^n_{i+1}(x)}{t_{i+n+1}-t_{i}}dx$,原命题成立
+        \subsection{VIII}
+            该命题可表示为$\forall m \in N ,\forall n=0,1,\cdots m$
+
+            $\tau_{m-n}(x_1,\cdots,x_n)=[(x_1,\cdots,x_n]x_m$
+
+            (a)当$m=4,n=2$时
 \end{document} 
