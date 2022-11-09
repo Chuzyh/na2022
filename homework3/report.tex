@@ -131,7 +131,38 @@
         \subsection{VIII}
             该命题可表示为$\forall m \in N ,\forall n=0,1,\cdots m$
 
-            $\tau_{m-n}(x_1,\cdots,x_n)=[(x_1,\cdots,x_n]x_m$
+            $\tau_{m-n}(x_0,\cdots,x_n)=[x_0,\cdots,x_n]x_m$
 
-            (a)当$m=4,n=2$时
+            (a)当$m=4,n=2$时,可列出差商表
+
+            \begin{tabular}{c|c|c|c}
+                $x_1 $& $x_1^4$  \\
+                $x_2$ & $x_2^4$  & $x_1^3+x_1^2x_2+x_1x_2^2+x_2^3$ \\
+                $x_3$ & $x_3^4$  & $x_2^3+x_2^2x_3+x_2x_3^2+x_3^3$ & $x_1^2+x_2^2+x_3^2+x_1x_2+x_2x_3+x_1x_3$ \\
+            \end{tabular}
+
+            故有$\tau_{2}(x_1,x_2,x_3)=[x_1,x_2,x_3]x^4$
+
+            (b)
+
+            由$(x_{n+1}-x_0)\tau_k(x_0,\cdots,x_n,x_{n+1})$
+
+            $=\tau_{k+1}(x_0,\cdots,x_n,x_{n+1})-\tau_{k+1}(x_0,\cdots,x_n)-x_0\tau_k(x_0,\cdots,x_n,x_{n+1})$
+
+            $=\tau_{k+1}(x_1,\cdots,x_n,x_{n+1})-\tau_{k+1}(x_0,\cdots,x_n)$
+
+            当$n=0$时，$\forall m$,有$\tau_m(x_0)=[x_0]x^m$.
+
+            假设对某个$n<m$，原式成立，则有
+
+            $\tau_{m-n-1}(x_0,\cdots,x_{n+1})$
+
+            $=\frac{\tau_{m-n}(x_1,\cdots,x_n,x_{n+1})-\tau_{m-n}(x_0,\cdots,x_n)}{x_{n+1}-x_0}$
+            
+            $=\frac{[x_1,\cdots,x_n,x_{n+1}]x^m-[x_0,\cdots,x_n]x^m}{x_{n+1}-x_0}$
+
+            $=[x_0,\cdots,x_n,x_{n+1}]x^m$
+
+            故原命题成立。
+            
 \end{document} 
