@@ -3,8 +3,8 @@
 \usepackage{graphicx}%插入图片的包
 \usepackage{geometry}%设置A4纸页边距的包
 \usepackage{url}
-\usepackage{amsthm,amsmath,amssymb}
-\usepackage{mathrsfs}
+\usepackage{stfloats}
+\usepackage{float}
 \geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}%设置页边距
 \linespread{1}%设置行间距
 
@@ -71,5 +71,50 @@
 
         \subsection{V}
             \subsubsection{a}
+            当$x\in[t_{i-1},t_i]$时，$B_i^2(x)=\frac{(x-t_{i-1})^2}{(t_{i+1}-t_{i-1})(t_{i}-t_{i-1})}$
+
+            当$x\in[t_{i},t_{i+1}]$时，$B_i^2(x)=\frac{(x-t_{i-1})(t_{i+1}-x)}{(t_{i+1}-t_{i-1})(t_{i+1}-t_{i})}+\frac{(x-t_{i})(t_{i+2}-x)}{(t_{i+2}-t_{i})(t_{i+1}-t_{i})}$
+
+            当$x\in[t_{i+1},t_{i+2}]$时，$B_i^2(x)=\frac{(x-t_{i+2})^2}{(t_{i+2}-t_{i})(t_{i+2}-t_{i+1})}$
+
+            \subsubsection{b}
+            $\frac{d}{dx}B^2_i(t_i^-)=\frac{2}{t_{i+1}-t_{i-1}}=\frac{d}{dx}B^2_i(t_i^+)$
+            
+            $\frac{d}{dx}B^2_i(t_{i+1}^-)=-\frac{2}{t_{i+2}-t_{i-1}}=\frac{d}{dx}B^2_i(t_{i+1}^+)$
+            
+            故$\frac{d}{dx}B^2_i$在$t_i$和$t_{i+1}$上连续。
+
+            \subsubsection{c}
+            当$x\in(t_{i-1},t_i)$时,$\frac{d}{dx}B^2_i=\frac{2(x-t_{i-1})}{(t_{i+1}-t_{i-1})(t_i-t_{i-1})}\neq 0$
+
+            当$x\in(t_{i},t_{i+1})$时，$\frac{d}{dx}B^2_i$为线性函数，故只有一处$x^*$为0.
+
+            $x^*=\frac{(t_{i+1}+t_{i-1})(t_{i+2}-t_{i})+(t_{i+2}+t_{i})(t_{i+1}-t_{i-1})}{2(t_{i+1}+t_{i+2}-t_{i-1}-t_{i})}$
+
+            \subsubsection{d}
+            只需考虑边界点和极值点，$B_i^2(t_i)=0$,$B_i^2(x^*)< 1$
+
+            故$B^2_i(x)\in [0,1)$
+            \subsubsection{e}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.7\textwidth]{./pic/e.eps}
+                \caption{$B_1^2(x)$的图像}
+            \end{figure}
+
+        \subsection{VI}
+        $LHS=[t_i,t_{i+1},t_{i+2}](t-x)^2_+-[t_{i-1},t_{i},t_{i+1}](t-x)^2_+$
+
+        当$x\le t_{i-1}$时，$LHS=0=RHS$
+
+        当$t_{i-1}<x\le t_{i}$时，$LHS=\frac{(x-t_{i-1})^2}{(t_{i+1}-t_{i-1})(t_{i}-t_{i-1})}=RHS$
+
+        当$t_i<x\le t_{i+1}$时，$LHS=\frac{(x-t_{i-1})(t_{i+1}-x)}{(t_{i+1}-t_{i-1})(t_{i+1}-t_{i})}+\frac{(x-t_{i})(t_{i+2}-x)}{(t_{i+2}-t_{i})(t_{i+1}-t_{i})}=RHS$
+
+        当$t_{i+1}<x\le t_{i+2}$时，$LHS=\frac{(x-t_{i+2})^2}{(t_{i+2}-t_{i})(t_{i+2}-t_{i+1})}=RHS$
+
+        当$x> t_{i+2}$时，$LHS=0=RHS$
+
+        综上，原等式成立。
             
 \end{document} 
