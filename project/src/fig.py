@@ -29,6 +29,18 @@ l=["log max error","log N^-2","log N^-3"]
 plt.legend(l)
 plt.savefig('../pic/A2.eps')
 
+
+t=pd.read_csv("../data/A3.out",header=None)
+plt.figure()
+n=len(t.columns)
+X=t.iloc[0,0:n]
+Y=t.iloc[1,0:n]
+
+plt.plot(X,Y)
+l=["log max error ratio"]
+plt.legend(l)
+plt.savefig('../pic/A3.eps')
+
 t=pd.read_csv("../data/C.out",header=None)
 x=np.arange(-5,5.0001,0.001)
 plt.figure()

@@ -53,6 +53,15 @@ int main()
     for(int i=0;i<obj["n"].size();i++)
     {
         printf("%.10lf,",mx[i]);
+    }fclose(stdout);
+    freopen("../data/A3.out","w",stdout);
+    for(int i=1;i<obj["n"].size();i++)
+    {
+        printf("%d,",i);
+    }puts("");
+    for(int i=1;i<obj["n"].size();i++)
+    {
+        printf("%.10lf,",mx[i-1]/mx[i]);
     }
     return 0;
 }
